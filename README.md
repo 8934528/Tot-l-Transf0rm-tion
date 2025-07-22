@@ -1,7 +1,5 @@
 # 💅 Total-Transformation – Beauty Services Booking System
 
-✨ A platform connecting beauty professionals with clients for seamless service bookings.
-
 ## 🌟 Overview
 Total-Transformation bridges the gap between beauty service providers (students, entrepreneurs, and professionals) and clients looking to book beauty services.
 
