@@ -1,2 +1,145 @@
-﻿body {
+﻿/* Earnings Page Styles */
+.earnings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.earnings-title h2 {
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.earnings-title p {
+    color: #6c757d;
+    margin-bottom: 0;
+}
+
+.earnings-period .dropdown-menu {
+    min-width: 150px;
+}
+
+/* Chart Card */
+.chart-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chart-legend {
+    display: flex;
+    gap: 15px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+}
+
+.legend-label {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* Top Services */
+.top-services {
+    padding: 10px 0;
+}
+
+.service-item {
+    margin-bottom: 15px;
+}
+
+    .service-item:last-child {
+        margin-bottom: 0;
+    }
+
+.service-info {
+    margin-bottom: 5px;
+}
+
+.service-name {
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.service-stats {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.service-percentage {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+    .service-percentage .progress {
+        flex: 1;
+        height: 6px;
+        background-color: #e9ecef;
+        border-radius: 3px;
+    }
+
+    .service-percentage span {
+        font-size: 0.8rem;
+        color: var(--dark-color);
+        width: 40px;
+        text-align: right;
+    }
+
+/* Transactions Table */
+.table th, .table td {
+    vertical-align: middle;
+}
+
+    .table th:first-child,
+    .table td:first-child {
+        width: 150px;
+    }
+
+    .table th:nth-child(4),
+    .table td:nth-child(4) {
+        width: 100px;
+        text-align: right;
+    }
+
+    .table th:last-child,
+    .table td:last-child {
+        width: 100px;
+        text-align: center;
+    }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .earnings-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .chart-legend {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .service-percentage {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+        .service-percentage span {
+            text-align: left;
+        }
 }
