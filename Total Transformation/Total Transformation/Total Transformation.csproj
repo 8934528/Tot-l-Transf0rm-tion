@@ -83,13 +83,15 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
-    <Content Include="Pages\Admin\AdminDash.aspx" />
     <Content Include="Pages\Admin\AdminDash.css" />
     <Content Include="Pages\Admin\AdminDash.js" />
     <Content Include="Pages\Client\DashboardClient.css" />
     <Content Include="Pages\Client\DashboardClient.js" />
     <Content Include="Pages\InMaster\InMaster.css" />
     <Content Include="Pages\InMaster\InMaster.js" />
+    <Content Include="Pages\Client\DashboardClient.aspx" />
+    <Content Include="Pages\Admin\AdminDash.aspx" />
+    <Content Include="Pages\Practitioner\DashPractitioner.aspx" />
     <Content Include="Pages\Practitioner\DashPractitioner.css" />
     <Content Include="Pages\Practitioner\DashPractitioner.js" />
     <Content Include="Pages\Signin\Signin.aspx" />
@@ -110,6 +112,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\InMaster\InMaster.Master.cs">
+      <DependentUpon>InMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\InMaster\InMaster.Master.designer.cs">
+      <DependentUpon>InMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Client\DashboardClient.aspx.cs">
+      <DependentUpon>DashboardClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Client\DashboardClient.aspx.designer.cs">
+      <DependentUpon>DashboardClient.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Admin\AdminDash.aspx.cs">
       <DependentUpon>AdminDash.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -117,12 +133,12 @@
     <Compile Include="Pages\Admin\AdminDash.aspx.designer.cs">
       <DependentUpon>AdminDash.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\InMaster\InMaster.Master.cs">
-      <DependentUpon>InMaster.Master</DependentUpon>
+    <Compile Include="Pages\Practitioner\DashPractitioner.aspx.cs">
+      <DependentUpon>DashPractitioner.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\InMaster\InMaster.Master.designer.cs">
-      <DependentUpon>InMaster.Master</DependentUpon>
+    <Compile Include="Pages\Practitioner\DashPractitioner.aspx.designer.cs">
+      <DependentUpon>DashPractitioner.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Signin\Signin.aspx.cs">
       <DependentUpon>Signin.aspx</DependentUpon>

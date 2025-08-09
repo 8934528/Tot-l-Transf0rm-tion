@@ -10,7 +10,7 @@
 
 namespace Total_Transformation.Pages.InMaster
 {
-    public partial class WebForm3
+    public partial class WebForm1
     {
     }
 }
