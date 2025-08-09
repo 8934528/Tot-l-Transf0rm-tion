@@ -84,22 +84,97 @@ Total Transformation bridges the gap between beauty service providers (students,
                 |    |    ├── DashboardClient.apsx
                 |    |    ├── DashboardClient.css
                 |    |    ├── DashboardClient.js
-                |    |    |
-                |    |    ├── 
+                |    |    |   
+                |    |    ├── Appointments/
+                |    |    |    ├── Appointments.aspx
+                |    |    |    ├── Appointments.css
+                |    |    |    └── Appointments.js
+                |    |    |   
+                |    |    ├── BookServices/
+                |    |    |    ├── BookServices.aspx
+                |    |    |    ├── BookServices.css
+                |    |    |    └── BookServices.js
+                |    |    |   
+                |    |    ├── Favorites/
+                |    |    |    ├── Favorites.aspx
+                |    |    |    ├── Favorites.css
+                |    |    |    └── Favorites.js
+                |    |    |   
+                |    |    ├── Profile/
+                |    |    |    ├── Profile.aspx
+                |    |    |    ├── Profile.css
+                |    |    |    └── Profile.js
+                |    |    |   
+                |    |    └── Settings/
+                |    |         ├── Settings.aspx
+                |    |         ├── Settings.css
+                |    |         └── Settings.js
                 |    |
                 │    ├── Practitioner/                   # This is the content page from the InMaster.Master page
                 |    |    ├── DashPractitioner.apsx
                 |    |    ├── DashPractitioner.css
                 |    |    ├── DashPractitioner.js
                 |    |    |
-                |    |    ├── 
+                |    |    ├── Appointments/
+                |    |    |    ├── Appointments.aspx
+                |    |    |    ├── Appointments.css
+                |    |    |    └── Appointments.js
+                |    |    |
+                |    |    ├── Earnings/
+                |    |    |    ├── Earnings.aspx
+                |    |    |    ├── Earnings.css
+                |    |    |    └── Earnings.js
+                |    |    |
+                |    |    ├── Profiles/
+                |    |    |    ├── Profiles.aspx
+                |    |    |    ├── Profiles.css
+                |    |    |    └── Profiles.js
+                |    |    |
+                |    |    ├── Services/
+                |    |    |    ├── Services.aspx
+                |    |    |    ├── Services.css
+                |    |    |    └── Services.js
+                |    |    |
+                |    |    └── Settings/
+                |    |         ├── Settings.aspx
+                |    |         ├── Settings.css
+                |    |         └── Settings.js
+                |    |
                 |    |
                 │    └── Admin/                           # This is the content page from the InMaster.Master page
-                |    |    ├── AdminDash.apsx
-                |    |    ├── AdminDash.css
-                |    |    ├──  AdminDash.js
-                |    |    |   
-                |    |    ├── 
+                |         ├── AdminDash.apsx
+                |         ├── AdminDash.css
+                |         ├── AdminDash.js
+                |         |   
+                |         ├── Bookings/
+                |         |    ├── Bookings.aspx
+                |         |    ├── Bookings.css
+                |         |    └── Bookings.js
+                |         |
+                |         ├── Reports/
+                |         |    ├── Reports.aspx
+                |         |    ├── Reports.css
+                |         |    └── Reports.js
+                |         |
+                |         ├── Services/
+                |         |    ├── Services.aspx
+                |         |    ├── Services.css
+                |         |    └── Services.js
+                |         |
+                |         ├── Settings/
+                |         |    ├── Settings.aspx
+                |         |    ├── Settings.css
+                |         |    └── Settings.js
+                |         |
+                |         ├── Support/
+                |         |    ├── Support.aspx
+                |         |    ├── Support.css
+                |         |    └── Support.js
+                |         |
+                |         └── Users/
+                |              ├── Users.aspx
+                |              ├── Users.css
+                |              └── Users.js
                 |   
                 └── web.config 
 
