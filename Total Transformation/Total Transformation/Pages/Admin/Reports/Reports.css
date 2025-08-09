@@ -1,2 +1,33 @@
-﻿body {
+﻿/* Reports specific styles */
+.chart-card {
+    margin-bottom: 20px;
+}
+
+.generate-report-card .form-group {
+    margin-bottom: 20px;
+}
+
+.generate-report-card label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.generate-report-card .form-check {
+    margin-bottom: 10px;
+}
+
+.generate-report-card .form-check-label {
+    margin-left: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .generate-report-card .row > div {
+        margin-bottom: 15px;
+    }
+
+        .generate-report-card .row > div:last-child {
+            margin-bottom: 0;
+        }
 }

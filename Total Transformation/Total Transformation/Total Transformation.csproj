@@ -115,7 +115,6 @@
     <Content Include="Pages\Admin\AdminDash.aspx" />
     <Content Include="Pages\Admin\Users\Users.aspx" />
     <Content Include="Pages\Admin\Services\Services.aspx" />
-    <Content Include="Pages\Admin\Bookings\Bookings.aspx" />
     <Content Include="Pages\Admin\Reports\Reports.aspx" />
     <Content Include="Pages\Admin\Settings\Settings.aspx" />
     <Content Include="Pages\Admin\Support\Support.aspx" />
@@ -124,6 +123,7 @@
     <Content Include="Pages\Client\Profile\Profile.aspx" />
     <Content Include="Pages\Client\Appointments\Appointments.aspx" />
     <Content Include="Pages\Client\Settings\Settings.aspx" />
+    <Content Include="Pages\Admin\Bookings\Bookings.aspx" />
     <Content Include="Pages\Practitioner\Appointments\Appointments.aspx" />
     <Content Include="Pages\Practitioner\Earnings\Earnings.aspx" />
     <Content Include="Pages\Practitioner\Profiles\Profiles.aspx" />
@@ -195,13 +195,6 @@
     <Compile Include="Pages\Admin\Services\Services.aspx.designer.cs">
       <DependentUpon>Services.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Admin\Bookings\Bookings.aspx.cs">
-      <DependentUpon>Bookings.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\Admin\Bookings\Bookings.aspx.designer.cs">
-      <DependentUpon>Bookings.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Pages\Admin\Reports\Reports.aspx.cs">
       <DependentUpon>Reports.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -257,6 +250,13 @@
     </Compile>
     <Compile Include="Pages\Client\Settings\Settings.aspx.designer.cs">
       <DependentUpon>Settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Bookings\Bookings.aspx.cs">
+      <DependentUpon>Bookings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Bookings\Bookings.aspx.designer.cs">
+      <DependentUpon>Bookings.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Practitioner\Appointments\Appointments.aspx.cs">
       <DependentUpon>Appointments.aspx</DependentUpon>
