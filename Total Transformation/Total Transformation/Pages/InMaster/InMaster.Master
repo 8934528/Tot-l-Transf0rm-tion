@@ -4,14 +4,21 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+
     <link href="InMaster.css" rel="stylesheet" />
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+
     <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&family=Tomorrow:wght@400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
+
 </head>
+
 <body>
     <form id="form1" runat="server">
         <div class="dashboard-container">
@@ -25,13 +32,13 @@
                         <i class="fas fa-bars"></i>
                     </button>
                 </div>
-                
+
                 <div class="sidebar-menu">
                     <asp:ContentPlaceHolder ID="SidebarContent" runat="server">
                         <!-- Sidebar content will be populated by child pages -->
                     </asp:ContentPlaceHolder>
                 </div>
-                
+
                 <div class="sidebar-footer">
                     <div class="user-profile">
                         <div class="user-avatar">
@@ -43,11 +50,11 @@
                         </div>
                     </div>
                     <a href="../Signin/Signin.aspx" class="logout-btn">
-                        <i class="fas fa-sign-out-alt"></i> Logout
+                        <i class="fas fa-sign-out-alt"></i>Logout
                     </a>
                 </div>
             </div>
-            
+
             <!-- Main Content -->
             <div class="main-content">
                 <!-- Top Navigation -->
@@ -72,7 +79,7 @@
                         </div>
                     </div>
                 </nav>
-                
+
                 <!-- Content Area -->
                 <div class="content-area">
                     <div class="page-header">
@@ -80,14 +87,14 @@
                             <!-- Page header content will be populated by child pages -->
                         </asp:ContentPlaceHolder>
                     </div>
-                    
+
                     <div class="page-content">
                         <asp:ContentPlaceHolder ID="MainContent" runat="server">
                             <!-- Main content will be populated by child pages -->
                         </asp:ContentPlaceHolder>
                     </div>
                 </div>
-                
+
                 <!-- Footer -->
                 <footer class="footer">
                     <p>&copy; 2023 Total Transformation. All rights reserved.</p>
@@ -98,9 +105,12 @@
 
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
+
     <script src="InMaster.js"></script>
+
     <asp:ContentPlaceHolder ID="ScriptsContent" runat="server">
     </asp:ContentPlaceHolder>
+
 </body>
 </html>
 
