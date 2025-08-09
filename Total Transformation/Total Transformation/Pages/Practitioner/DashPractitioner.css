@@ -1,2 +1,92 @@
-﻿body {
+﻿/* Practitioner-specific dashboard styles */
+.practitioner-welcome {
+    background: linear-gradient(135deg, rgba(158, 27, 50, 0.1) 0%, rgba(249, 98, 159, 0.1) 100%);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+    .practitioner-welcome h2 {
+        color: var(--secondary-color);
+        margin-bottom: 10px;
+    }
+
+    .practitioner-welcome p {
+        color: #6c757d;
+        margin-bottom: 0;
+    }
+
+/* Reviews List */
+.reviews-list {
+    padding: 10px 0;
+}
+
+.review-item {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+    .review-item:last-child {
+        border-bottom: none;
+    }
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.reviewer {
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.review-rating {
+    color: #ffc107;
+}
+
+.review-content {
+    color: #6c757d;
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+.review-time {
+    font-size: 0.8rem;
+    color: #adb5bd;
+}
+
+/* Schedule Table */
+.table th:first-child,
+.table td:first-child {
+    width: 100px;
+}
+
+.table th:nth-child(4),
+.table td:nth-child(4) {
+    width: 100px;
+}
+
+.table th:last-child,
+.table td:last-child {
+    width: 100px;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .practitioner-welcome {
+        text-align: center;
+    }
+
+    .review-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .review-rating {
+        margin-top: 5px;
+    }
 }
