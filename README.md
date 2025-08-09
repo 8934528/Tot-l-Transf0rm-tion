@@ -60,6 +60,11 @@ Total Transformation bridges the gap between beauty service providers (students,
                 ├── Scripts/                         # JavaScript files and Bootstrap scripts
                 |
                 ├── Pages/
+                |    ├── InMaster/                   # This works for pages after the users have signed in
+                |    |    ├── InMaster.Master
+                |    |    ├── InMaster.css
+                |    |    └── InMaster.js
+                |    |   
                 |    ├── startPage/ 
                 |    |    ├── startPage.apsx
                 |    |    ├── startPage.css
@@ -75,21 +80,21 @@ Total Transformation bridges the gap between beauty service providers (students,
                 |    |    ├── Signup.css
                 |    |    └── Signup.js
                 |    |
-                │    ├── Client/
+                │    ├── Client/                        # This is the content page from the InMaster.Master page
                 |    |    ├── DashboardClient.apsx
                 |    |    ├── DashboardClient.css
                 |    |    ├── DashboardClient.js
                 |    |    |
                 |    |    ├── 
                 |    |
-                │    ├── Practitioner/ 
+                │    ├── Practitioner/                   # This is the content page from the InMaster.Master page
                 |    |    ├── DashPractitioner.apsx
                 |    |    ├── DashPractitioner.css
                 |    |    ├── DashPractitioner.js
                 |    |    |
                 |    |    ├── 
                 |    |
-                │    └── Admin/ 
+                │    └── Admin/                           # This is the content page from the InMaster.Master page
                 |    |    ├── AdminDash.apsx
                 |    |    ├── AdminDash.css
                 |    |    ├──  AdminDash.js
