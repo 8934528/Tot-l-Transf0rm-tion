@@ -53,17 +53,48 @@ Total Transformation bridges the gap between beauty service providers (students,
 ## Project Structure
 
                 Tot-l-Transf0rm-tion/
-                ├── Content/ # Static content and Bootstrap files
-                ├── Images/ # All image assets
-                ├── Scripts/ # JavaScript files and Bootstrap scripts
+                ├── Content/                         # Static content and Bootstrap files
+                |
+                ├── Images/ 
+                |
+                ├── Scripts/                         # JavaScript files and Bootstrap scripts
+                |
                 ├── Pages/
-                │ ├── startPage/ # Landing page
-                │ ├── Signin/ # Login functionality
-                │ ├── Signup/ # Registration functionality
-                │ ├── Client/ # Client-facing pages
-                │ ├── Practitioner/ # Service provider pages
-                │ └── Admin/ # Admin management pages
-                ├── App_Code/ # Business logic and data access
-                ├── App_Data/ # Database files
-                └── web.config # Configuration file
+                |    ├── startPage/ 
+                |    |    ├── startPage.apsx
+                |    |    ├── startPage.css
+                |    |    └── startPage.js
+                |    |   
+                |    ├── Signin/ 
+                |    |    ├── Signin.apsx
+                |    |    ├── Signin.css
+                |    |    └── Signin.js
+                |    |
+                │    ├── Signup/ 
+                |    |    ├── Signup.apsx
+                |    |    ├── Signup.css
+                |    |    └── Signup.js
+                |    |
+                │    ├── Client/
+                |    |    ├── DashboardClient.apsx
+                |    |    ├── DashboardClient.css
+                |    |    ├── DashboardClient.js
+                |    |    |
+                |    |    ├── 
+                |    |
+                │    ├── Practitioner/ 
+                |    |    ├── DashPractitioner.apsx
+                |    |    ├── DashPractitioner.css
+                |    |    ├── DashPractitioner.js
+                |    |    |
+                |    |    ├── 
+                |    |
+                │    └── Admin/ 
+                |    |    ├── AdminDash.apsx
+                |    |    ├── AdminDash.css
+                |    |    ├──  AdminDash.js
+                |    |    |   
+                |    |    ├── 
+                |   
+                └── web.config 
 
