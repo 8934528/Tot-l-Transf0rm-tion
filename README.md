@@ -41,7 +41,7 @@ Total Transformation bridges the gap between beauty service providers (students,
 4. **Booking Confirmation**: Practitioners accept/reject bookings
 5. **Admin Monitoring**: Track users, services, and revenue
 
-## 🛠️ Technologies Used
+## Technologies Used
 | Category | Technologies |
 |----------|-------------|
 | Frontend | HTML, CSS, JavaScript, Bootstrap |
