@@ -1,69 +1,34 @@
 ﻿$(document).ready(function () {
-    // Form validation
-    $('#form1').submit(function (e) {
-        let isValid = true;
-
-        // Validate email
-        const email = $('#txtEmail').val().trim();
-        if (email === '') {
-            showError($('#txtEmail'), 'Email is required');
-            isValid = false;
-        } else if (!isValidEmail(email)) {
-            showError($('#txtEmail'), 'Please enter a valid email');
-            isValid = false;
-        } else {
-            clearError($('#txtEmail'));
-        }
-
-        // Validate password
-        const password = $('#txtPassword').val().trim();
-        if (password === '') {
-            showError($('#txtPassword'), 'Password is required');
-            isValid = false;
-        } else if (password.length < 6) {
-            showError($('#txtPassword'), 'Password must be at least 6 characters');
-            isValid = false;
-        } else {
-            clearError($('#txtPassword'));
-        }
-
-        if (!isValid) {
-            e.preventDefault();
-        }
-    });
-
-    // Helper function to validate email
-    function isValidEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
-    }
-
-    // Show error message
-    function showError(element, message) {
-        const formGroup = element.closest('.form-group');
-        let errorElement = formGroup.find('.error-message');
-
-        if (errorElement.length === 0) {
-            errorElement = $('<small class="error-message text-danger"></small>');
-            formGroup.append(errorElement);
-        }
-
-        errorElement.text(message);
-        element.addClass('is-invalid');
-    }
-
-    // Clear error message
-    function clearError(element) {
-        const formGroup = element.closest('.form-group');
-        formGroup.find('.error-message').remove();
-        element.removeClass('is-invalid');
-    }
-
-    // Toggle password visibility (you can add an eye icon to implement this)
+    // Toggle password visibility
     $('.toggle-password').click(function () {
         const passwordInput = $('#txtPassword');
         const type = passwordInput.attr('type') === 'password' ? 'text' : 'password';
         passwordInput.attr('type', type);
         $(this).toggleClass('fa-eye fa-eye-slash');
     });
+
+    // Add toggle password button if not exists
+    if ($('.toggle-password').length === 0) {
+        $('#txtPassword').after('<span class="toggle-password fas fa-eye-slash"></span>');
+        $('.toggle-password').css({
+            'position': 'absolute',
+            'right': '10px',
+            'top': '35px',
+            'cursor': 'pointer',
+            'z-index': '10'
+        });
+        $('#txtPassword').parent().css('position', 'relative');
+    }
+
+    // Social login button hover effects
+    $('.btn-social').hover(
+        function () {
+            $(this).css('transform', 'translateY(-2px)');
+            $(this).css('box-shadow', '0 4px 8px rgba(0,0,0,0.1)');
+        },
+        function () {
+            $(this).css('transform', 'translateY(0)');
+            $(this).css('box-shadow', 'none');
+        }
+    );
 });

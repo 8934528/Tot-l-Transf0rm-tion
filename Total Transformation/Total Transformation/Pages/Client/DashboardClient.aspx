@@ -38,7 +38,8 @@
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="PageHeaderContent" runat="server">
-    <h1>Client Dashboard</h1>
+    <h1>Welcome,
+        <asp:Literal ID="litUserName" runat="server" />!</h1>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -46,6 +47,7 @@
         </ol>
     </nav>
 </asp:Content>
+
 <asp:Content ID="Content5" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row">
         <div class="col-md-6 col-lg-3">
@@ -56,8 +58,11 @@
                         <i class="fas fa-calendar-check"></i>
                     </div>
                 </div>
-                <div class="card-value">3</div>
-                <div class="card-footer">2 confirmed, 1 pending</div>
+                <div class="card-value">
+                    <asp:Literal ID="litUpcomingAppointments" runat="server" /></div>
+                <div class="card-footer">
+                    <asp:Literal ID="litAppointmentStatus" runat="server" />
+                </div>
             </div>
         </div>
         <div class="col-md-6 col-lg-3">
@@ -68,8 +73,9 @@
                         <i class="fas fa-heart"></i>
                     </div>
                 </div>
-                <div class="card-value">7</div>
-                <div class="card-footer">5 stylists, 2 salons</div>
+                <div class="card-value">
+                    <asp:Literal ID="litFavorites" runat="server" /></div>
+                <div class="card-footer">Your favorite practitioners</div>
             </div>
         </div>
         <div class="col-md-6 col-lg-3">
@@ -80,7 +86,7 @@
                         <i class="fas fa-wallet"></i>
                     </div>
                 </div>
-                <div class="card-value">R1,250</div>
+                <div class="card-value">R<asp:Literal ID="litTotalSpent" runat="server" /></div>
                 <div class="card-footer">This month</div>
             </div>
         </div>
@@ -92,8 +98,13 @@
                         <i class="fas fa-star"></i>
                     </div>
                 </div>
-                <div class="card-value">12</div>
-                <div class="card-footer">Average 4.8 rating</div>
+                <div class="card-value">
+                    <asp:Literal ID="litReviews" runat="server" /></div>
+                <div class="card-footer">
+                    Average
+                    <asp:Literal ID="litAvgRating" runat="server" />
+                    rating
+                </div>
             </div>
         </div>
     </div>
@@ -123,46 +134,20 @@
                     <h5 class="card-title">Recent Activity</h5>
                 </div>
                 <div class="activity-list">
-                    <div class="activity-item">
-                        <div class="activity-icon primary">
-                            <i class="fas fa-calendar-check"></i>
-                        </div>
-                        <div class="activity-content">
-                            <div class="activity-title">Appointment Confirmed</div>
-                            <div class="activity-desc">Haircut with Style Studio</div>
-                            <div class="activity-time">2 hours ago</div>
-                        </div>
-                    </div>
-                    <div class="activity-item">
-                        <div class="activity-icon accent">
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="activity-content">
-                            <div class="activity-title">Review Submitted</div>
-                            <div class="activity-desc">For Nail Art by Jane</div>
-                            <div class="activity-time">1 day ago</div>
-                        </div>
-                    </div>
-                    <div class="activity-item">
-                        <div class="activity-icon secondary">
-                            <i class="fas fa-cut"></i>
-                        </div>
-                        <div class="activity-content">
-                            <div class="activity-title">New Booking</div>
-                            <div class="activity-desc">Manicure at Nail Haven</div>
-                            <div class="activity-time">2 days ago</div>
-                        </div>
-                    </div>
-                    <div class="activity-item">
-                        <div class="activity-icon primary">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <div class="activity-content">
-                            <div class="activity-title">Added to Favorites</div>
-                            <div class="activity-desc">Beauty by Sarah</div>
-                            <div class="activity-time">3 days ago</div>
-                        </div>
-                    </div>
+                    <asp:Repeater ID="rptRecentActivity" runat="server">
+                        <ItemTemplate>
+                            <div class="activity-item">
+                                <div class="activity-icon primary">
+                                    <i class="fas fa-<%# Eval("Icon") %>"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <div class="activity-title"><%# Eval("Title") %></div>
+                                    <div class="activity-desc"><%# Eval("Description") %></div>
+                                    <div class="activity-time"><%# Eval("TimeAgo") %></div>
+                                </div>
+                            </div>
+                        </ItemTemplate>
+                    </asp:Repeater>
                 </div>
             </div>
         </div>
@@ -173,47 +158,37 @@
             <div class="dashboard-card">
                 <div class="card-header">
                     <h5 class="card-title">Upcoming Appointments</h5>
-                    <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+                    <a href="Appointments/Appointments.aspx" class="btn btn-sm btn-outline-primary">View All</a>
                 </div>
                 <div class="table-responsive">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th>Service</th>
-                                <th>Professional</th>
-                                <th>Date & Time</th>
-                                <th>Location</th>
-                                <th>Status</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Haircut & Styling</td>
-                                <td>Style Studio</td>
-                                <td>Tomorrow, 10:00 AM</td>
-                                <td>123 Beauty St</td>
-                                <td><span class="badge badge-success">Confirmed</span></td>
-                                <td><a href="#" class="btn btn-sm btn-outline-primary">Details</a></td>
-                            </tr>
-                            <tr>
-                                <td>Manicure</td>
-                                <td>Nail Haven</td>
-                                <td>June 15, 2:00 PM</td>
-                                <td>456 Glamour Ave</td>
-                                <td><span class="badge badge-success">Confirmed</span></td>
-                                <td><a href="#" class="btn btn-sm btn-outline-primary">Details</a></td>
-                            </tr>
-                            <tr>
-                                <td>Makeup Session</td>
-                                <td>Beauty by Sarah</td>
-                                <td>June 20, 11:00 AM</td>
-                                <td>789 Style Blvd</td>
-                                <td><span class="badge badge-warning">Pending</span></td>
-                                <td><a href="#" class="btn btn-sm btn-outline-primary">Details</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <asp:GridView ID="gvUpcomingAppointments" runat="server" AutoGenerateColumns="false"
+                        CssClass="table table-hover" GridLines="None">
+                        <Columns>
+                            <asp:BoundField DataField="ServiceName" HeaderText="Service" />
+                            <asp:BoundField DataField="PractitionerName" HeaderText="Professional" />
+                            <asp:BoundField DataField="FormattedDateTime" HeaderText="Date & Time" />
+                            <asp:BoundField DataField="Location" HeaderText="Location" />
+                            <asp:TemplateField HeaderText="Status">
+                                <ItemTemplate>
+                                    <span class='badge <%# GetStatusClass(Eval("Status").ToString()) %>'>
+                                        <%# Eval("Status") %>
+                                    </span>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Action">
+                                <ItemTemplate>
+                                    <a href='Appointments/AppointmentDetails.aspx?id=<%# Eval("BookingID") %>'
+                                        class="btn btn-sm btn-outline-primary">Details</a>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                        <EmptyDataTemplate>
+                            <div class="text-center p-4">
+                                <i class="fas fa-calendar-times fa-3x text-muted"></i>
+                                <p class="mt-2">No upcoming appointments</p>
+                            </div>
+                        </EmptyDataTemplate>
+                    </asp:GridView>
                 </div>
             </div>
         </div>

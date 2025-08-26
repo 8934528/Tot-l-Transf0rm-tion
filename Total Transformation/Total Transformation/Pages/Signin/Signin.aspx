@@ -42,7 +42,7 @@
                         <a href="#" class="forgot-password">Forgot password?</a>
                     </div>
                     
-                    <asp:Button ID="btnLogin" runat="server" Text="Sign In" CssClass="btn btn-login" />
+                    <asp:Button ID="btnLogin" runat="server" Text="Sign In" CssClass="btn btn-login" OnClick="btnLogin_Click" />
                     
                     <div class="login-divider">
                         <span>or</span>

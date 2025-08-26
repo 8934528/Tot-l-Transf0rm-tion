@@ -8,7 +8,10 @@
     <link href="Signup.css" rel="stylesheet" />
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&family=Tomorrow:wght@400;600&display=swap" rel="stylesheet" />
+    <!-- SweetAlert CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" />
 </head>
+
 <body>
     <form id="form1" runat="server">
         <div class="signup-container">
@@ -16,7 +19,7 @@
                 <div class="signup-content">
                     <h1>Join Our Community!</h1>
                     <p>Create an account to book beauty services or offer your professional skills.</p>
-                    <img src="../Images/signup-image.png" alt="Beauty Services" class="img-fluid" />
+                    <img src="../../Images/signup-image.png" alt="Beauty Services" class="img-fluid" style="width:300px; height:200px;" />
                 </div>
             </div>
             <div class="signup-right">
@@ -25,39 +28,43 @@
                         <span>Total Transformation</span>
                     </div>
                     <h2>Create Account</h2>
-                    
+
                     <div class="user-type-toggle">
                         <div class="btn-group btn-group-toggle" data-toggle="buttons">
                             <label class="btn btn-user-type active">
-                                <input type="radio" name="userType" id="client" autocomplete="off" checked /> Client
+                                <input type="radio" name="userType" id="client" value="Client" autocomplete="off" checked="checked" />
+                                Client
                             </label>
                             <label class="btn btn-user-type">
-                                <input type="radio" name="userType" id="practitioner" autocomplete="off" /> Practitioner
+                                <input type="radio" name="userType" id="practitioner" value="Practitioner" autocomplete="off" />
+                                Practitioner
                             </label>
                         </div>
                     </div>
-                    
+
                     <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="txtFirstName">First Name</label>
-                            <asp:TextBox ID="txtFirstName" runat="server" CssClass="form-control" placeholder="First name"></asp:TextBox>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="txtLastName">Last Name</label>
-                            <asp:TextBox ID="txtLastName" runat="server" CssClass="form-control" placeholder="Last name"></asp:TextBox>
+                        <div>
+                            <div class="form-group col-md-6">
+                                <label for="txtFirstName">First Name</label>
+                                <asp:TextBox ID="txtFirstName" runat="server" CssClass="form-control" placeholder="First name"></asp:TextBox>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="txtLastName">Last Name</label>
+                                <asp:TextBox ID="txtLastName" runat="server" CssClass="form-control" placeholder="Last name"></asp:TextBox>
+                            </div>
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="txtEmail">Email Address</label>
                         <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Enter your email" TextMode="Email"></asp:TextBox>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="txtPhone">Phone Number</label>
-                        <asp:TextBox ID="txtPhone" runat="server" CssClass="form-control" placeholder="Enter your phone number" TextMode="Phone"></asp:TextBox>
+                        <asp:TextBox ID="txtPhone" runat="server" CssClass="form-control" placeholder="Enter your phone number"></asp:TextBox>
                     </div>
-                    
+
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="txtPassword">Password</label>
@@ -69,7 +76,7 @@
                             <asp:TextBox ID="txtConfirmPassword" runat="server" CssClass="form-control" placeholder="Confirm password" TextMode="Password"></asp:TextBox>
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <div class="form-check">
                             <asp:CheckBox ID="chkTerms" runat="server" CssClass="form-check-input" />
@@ -78,9 +85,9 @@
                             </label>
                         </div>
                     </div>
-                    
-                    <asp:Button ID="btnSignup" runat="server" Text="Sign Up" CssClass="btn btn-signup" />
-                    
+
+                    <asp:Button ID="btnSignup" runat="server" Text="Sign Up" CssClass="btn btn-signup" OnClick="btnSignup_Click" />
+
                     <div class="login-link">
                         Already have an account? <a href="../Signin/Signin.aspx">Log in</a>
                     </div>
@@ -89,7 +96,10 @@
         </div>
     </form>
 
+    <!-- SweetAlert JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
     <script src="Signup.js"></script>
 </body>
+</html>
