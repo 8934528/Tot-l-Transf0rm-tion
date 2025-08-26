@@ -59,6 +59,8 @@ Total Transformation bridges the gap between beauty service providers (students,
                 |
                 ├── Scripts/                         # JavaScript files and Bootstrap scripts
                 |
+                ├── Classes/ 
+                |
                 ├── Pages/
                 |    ├── InMaster/                   # This works for pages after the users have signed in
                 |    |    ├── InMaster.Master
